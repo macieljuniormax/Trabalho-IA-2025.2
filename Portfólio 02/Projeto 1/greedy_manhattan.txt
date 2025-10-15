@@ -1,0 +1,296 @@
+======= QUEBRA-CABEÇA — BUSCA INFORMADA (A* e Greedy) =======
+
+Estratégia de busca
+  1. astar (padrão)
+  2. greedy
+Escolha uma opção: 
+Heurística
+  1. manhattan (padrão)
+  2. misplaced
+Escolha uma opção: Digite o estado inicial (ex: 1,2,3,4,0,6,7,5,8): 
+Resumo da execução:
+  Estratégia : greedy
+  Heurística : manhattan
+  Inicial:
+ 1  4  2
+ 3  7  5
+ 6  ·  8
+  Objetivo:
+ 1  2  3
+ 4  5  6
+ 7  8  ·
+
+Estratégia : Greedy Best-First
+Heurística : manhattan
+Solução em 53 movimentos. Nós expandidos: 106
+
+Passo 0:
+ 1  4  2
+ 3  7  5
+ 6  ·  8
+
+Passo 1:
+ 1  4  2
+ 3  ·  5
+ 6  7  8
+
+Passo 2:
+ 1  4  2
+ ·  3  5
+ 6  7  8
+
+Passo 3:
+ 1  4  2
+ 6  3  5
+ ·  7  8
+
+Passo 4:
+ 1  4  2
+ 6  3  5
+ 7  ·  8
+
+Passo 5:
+ 1  4  2
+ 6  3  5
+ 7  8  ·
+
+Passo 6:
+ 1  4  2
+ 6  3  ·
+ 7  8  5
+
+Passo 7:
+ 1  4  2
+ 6  ·  3
+ 7  8  5
+
+Passo 8:
+ 1  ·  2
+ 6  4  3
+ 7  8  5
+
+Passo 9:
+ 1  2  ·
+ 6  4  3
+ 7  8  5
+
+Passo 10:
+ 1  2  3
+ 6  4  ·
+ 7  8  5
+
+Passo 11:
+ 1  2  3
+ 6  4  5
+ 7  8  ·
+
+Passo 12:
+ 1  2  3
+ 6  4  5
+ 7  ·  8
+
+Passo 13:
+ 1  2  3
+ 6  ·  5
+ 7  4  8
+
+Passo 14:
+ 1  2  3
+ ·  6  5
+ 7  4  8
+
+Passo 15:
+ 1  2  3
+ 7  6  5
+ ·  4  8
+
+Passo 16:
+ 1  2  3
+ 7  6  5
+ 4  ·  8
+
+Passo 17:
+ 1  2  3
+ 7  6  5
+ 4  8  ·
+
+Passo 18:
+ 1  2  3
+ 7  6  ·
+ 4  8  5
+
+Passo 19:
+ 1  2  3
+ 7  ·  6
+ 4  8  5
+
+Passo 20:
+ 1  2  3
+ ·  7  6
+ 4  8  5
+
+Passo 21:
+ 1  2  3
+ 4  7  6
+ ·  8  5
+
+Passo 22:
+ 1  2  3
+ 4  7  6
+ 8  ·  5
+
+Passo 23:
+ 1  2  3
+ 4  ·  6
+ 8  7  5
+
+Passo 24:
+ 1  2  3
+ ·  4  6
+ 8  7  5
+
+Passo 25:
+ 1  2  3
+ 8  4  6
+ ·  7  5
+
+Passo 26:
+ 1  2  3
+ 8  4  6
+ 7  ·  5
+
+Passo 27:
+ 1  2  3
+ 8  4  6
+ 7  5  ·
+
+Passo 28:
+ 1  2  3
+ 8  4  ·
+ 7  5  6
+
+Passo 29:
+ 1  2  3
+ 8  ·  4
+ 7  5  6
+
+Passo 30:
+ 1  2  3
+ 8  5  4
+ 7  ·  6
+
+Passo 31:
+ 1  2  3
+ 8  5  4
+ ·  7  6
+
+Passo 32:
+ 1  2  3
+ ·  5  4
+ 8  7  6
+
+Passo 33:
+ 1  2  3
+ 5  ·  4
+ 8  7  6
+
+Passo 34:
+ 1  2  3
+ 5  4  ·
+ 8  7  6
+
+Passo 35:
+ 1  2  3
+ 5  4  6
+ 8  7  ·
+
+Passo 36:
+ 1  2  3
+ 5  4  6
+ 8  ·  7
+
+Passo 37:
+ 1  2  3
+ 5  4  6
+ ·  8  7
+
+Passo 38:
+ 1  2  3
+ ·  4  6
+ 5  8  7
+
+Passo 39:
+ 1  2  3
+ 4  ·  6
+ 5  8  7
+
+Passo 40:
+ 1  2  3
+ 4  8  6
+ 5  ·  7
+
+Passo 41:
+ 1  2  3
+ 4  8  6
+ ·  5  7
+
+Passo 42:
+ 1  2  3
+ ·  8  6
+ 4  5  7
+
+Passo 43:
+ 1  2  3
+ 8  ·  6
+ 4  5  7
+
+Passo 44:
+ 1  2  3
+ 8  5  6
+ 4  ·  7
+
+Passo 45:
+ 1  2  3
+ 8  5  6
+ 4  7  ·
+
+Passo 46:
+ 1  2  3
+ 8  5  ·
+ 4  7  6
+
+Passo 47:
+ 1  2  3
+ 8  ·  5
+ 4  7  6
+
+Passo 48:
+ 1  2  3
+ ·  8  5
+ 4  7  6
+
+Passo 49:
+ 1  2  3
+ 4  8  5
+ ·  7  6
+
+Passo 50:
+ 1  2  3
+ 4  8  5
+ 7  ·  6
+
+Passo 51:
+ 1  2  3
+ 4  ·  5
+ 7  8  6
+
+Passo 52:
+ 1  2  3
+ 4  5  ·
+ 7  8  6
+
+Passo 53:
+ 1  2  3
+ 4  5  6
+ 7  8  ·
+
