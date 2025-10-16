@@ -1,0 +1,143 @@
+======= QUEBRA-CABEÇA — BUSCA NÃO INFORMADA (DLS e IDDFS) =======
+Digite o estado inicial (ex: 1,2,3,4,0,6,7,5,8) ou ENTER p/ padrão: 
+Estratégia:
+  1) dls   (profundidade limitada)
+  2) iddfs (aprofundamento iterativo) [padrão]
+Escolha (1/2, ENTER=padrão): 
+Resumo:
+Inicial:
+ 1  4  2
+ 3  7  5
+ 6  ·  8
+
+Objetivo:
+ 1  2  3
+ 4  5  6
+ 7  8  ·
+
+Executando IDDFS...
+
+Resumo:
+Inicial:
+ 1  4  2
+ 3  7  5
+ 6  ·  8
+
+Objetivo:
+ 1  2  3
+ 4  5  6
+ 7  8  ·
+
+Solução em 21 movimentos.
+Nós expandidos (total): 695774
+
+Passo 0:
+ 1  4  2
+ 3  7  5
+ 6  ·  8
+
+Passo 1:
+ 1  4  2
+ 3  ·  5
+ 6  7  8
+
+Passo 2:
+ 1  4  2
+ ·  3  5
+ 6  7  8
+
+Passo 3:
+ 1  4  2
+ 6  3  5
+ ·  7  8
+
+Passo 4:
+ 1  4  2
+ 6  3  5
+ 7  ·  8
+
+Passo 5:
+ 1  4  2
+ 6  3  5
+ 7  8  ·
+
+Passo 6:
+ 1  4  2
+ 6  3  ·
+ 7  8  5
+
+Passo 7:
+ 1  4  2
+ 6  ·  3
+ 7  8  5
+
+Passo 8:
+ 1  4  2
+ ·  6  3
+ 7  8  5
+
+Passo 9:
+ 1  4  2
+ 7  6  3
+ ·  8  5
+
+Passo 10:
+ 1  4  2
+ 7  6  3
+ 8  ·  5
+
+Passo 11:
+ 1  4  2
+ 7  ·  3
+ 8  6  5
+
+Passo 12:
+ 1  ·  2
+ 7  4  3
+ 8  6  5
+
+Passo 13:
+ 1  2  ·
+ 7  4  3
+ 8  6  5
+
+Passo 14:
+ 1  2  3
+ 7  4  ·
+ 8  6  5
+
+Passo 15:
+ 1  2  3
+ 7  4  5
+ 8  6  ·
+
+Passo 16:
+ 1  2  3
+ 7  4  5
+ 8  ·  6
+
+Passo 17:
+ 1  2  3
+ 7  4  5
+ ·  8  6
+
+Passo 18:
+ 1  2  3
+ ·  4  5
+ 7  8  6
+
+Passo 19:
+ 1  2  3
+ 4  ·  5
+ 7  8  6
+
+Passo 20:
+ 1  2  3
+ 4  5  ·
+ 7  8  6
+
+Passo 21:
+ 1  2  3
+ 4  5  6
+ 7  8  ·
+
