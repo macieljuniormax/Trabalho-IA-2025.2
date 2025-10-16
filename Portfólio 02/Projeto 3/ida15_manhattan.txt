@@ -1,0 +1,92 @@
+======= QUEBRA-CABEÇA — BUSCA COMPLEXA (IDA*) =======
+
+Tamanho do tabuleiro
+  1. 3x3 (8-puzzle) (padrão)
+  2. 4x4 (15-puzzle)
+Escolha (ENTER p/ padrão): Digite o estado inicial (ex: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0) ou ENTER p/ padrão: 
+Heurística
+  1. manhattan (padrão)
+  2. linear_conflict
+Escolha (ENTER p/ padrão): 
+Resumo da execução:
+  Tamanho: 4x4
+  Heurística: manhattan
+  Inicial:
+ 5  1  2  4
+ 9  6  3  8
+13 10  7 12
+ · 14 11 15
+  Objetivo:
+ 1  2  3  4
+ 5  6  7  8
+ 9 10 11 12
+13 14 15  ·
+
+Executando IDA*...
+
+
+===== RESULTADO =====
+Heurística: manhattan
+Solução encontrada em 9 movimentos.
+Nós expandidos (total): 11
+
+Passo 0:
+ 5  1  2  4
+ 9  6  3  8
+13 10  7 12
+ · 14 11 15
+
+Passo 1:
+ 5  1  2  4
+ 9  6  3  8
+ · 10  7 12
+13 14 11 15
+
+Passo 2:
+ 5  1  2  4
+ ·  6  3  8
+ 9 10  7 12
+13 14 11 15
+
+Passo 3:
+ ·  1  2  4
+ 5  6  3  8
+ 9 10  7 12
+13 14 11 15
+
+Passo 4:
+ 1  ·  2  4
+ 5  6  3  8
+ 9 10  7 12
+13 14 11 15
+
+Passo 5:
+ 1  2  ·  4
+ 5  6  3  8
+ 9 10  7 12
+13 14 11 15
+
+Passo 6:
+ 1  2  3  4
+ 5  6  ·  8
+ 9 10  7 12
+13 14 11 15
+
+Passo 7:
+ 1  2  3  4
+ 5  6  7  8
+ 9 10  · 12
+13 14 11 15
+
+Passo 8:
+ 1  2  3  4
+ 5  6  7  8
+ 9 10 11 12
+13 14  · 15
+
+Passo 9:
+ 1  2  3  4
+ 5  6  7  8
+ 9 10 11 12
+13 14 15  ·
+
