@@ -6,15 +6,13 @@ Disciplina: FGA0221 – Inteligência Artificial
 
 Descrição
 ---------
-Resolvemos o (quebra-cabeça 3x3) usando duas buscas informadas:
+Resolvendo o quebra-cabeça deslizante (quebra-cabeça 3x3) usando duas buscas informadas:
 - A* (expande por custo f = g + h)
 - Greedy Best-First (expande por custo f = h)
 
 Heurísticas disponíveis:
 - misplaced  : número de peças fora do lugar
 - manhattan  : soma das distâncias Manhattan das peças até a posição objetivo
-
-Estado: tupla de 9 inteiros (0 é o espaço vazio)
 """
 
 from dataclasses import dataclass, field
@@ -38,7 +36,10 @@ def row_col_to_index(row: int, col: int) -> int:
     return row * 3 + col
 
 def print_board(state: State) -> str:
-    """Retorna uma string para o estado 3x3."""
+    """
+    Retorna uma string formatada representando o estado 3x3 do tabuleiro.
+    Substitui o valor 0 por '·' para indicar o espaço vazio.
+    """
     rows = []
     for r in range(3):
         row = state[r*3:(r+1)*3]
